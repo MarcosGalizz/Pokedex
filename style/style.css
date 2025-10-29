@@ -23,6 +23,7 @@ header{
     color: var(--letter-color);
     text-align: center;
     width: 100dvw;
+    padding: 1rem;
 }
 
 body{
@@ -82,6 +83,10 @@ main{
 #form-button:hover{
     cursor: pointer;
     background-color: var(--hover-button-bg-color);
+}
+
+footer{
+    padding: 1rem;
 }
 
 footer > small{
