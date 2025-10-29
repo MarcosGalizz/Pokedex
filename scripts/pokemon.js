@@ -79,24 +79,6 @@ function mostrarPokemon(pokemon) {
     agregarEventosTipos();
 }
 
-const relacionesTipos = {
-    fire: {
-        fuerte: ["grass", "ice", "bug", "steel"],
-        debil: ["water", "rock", "ground"]
-    },
-    water: {
-        fuerte: ["fire", "rock", "ground"],
-        debil: ["electric", "grass"]
-    },
-    grass: {
-        fuerte: ["water", "ground", "rock"],
-        debil: ["fire", "ice", "poison", "flying", "bug"]
-    },
-    electric: {
-        fuerte: ["water", "flying"],
-        debil: ["ground"]
-    },
-};
 function agregarEventosTipos() {
     const tipos = document.querySelectorAll(".tipo");
     const tooltip = document.getElementById("tooltip");
