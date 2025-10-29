@@ -133,6 +133,7 @@ a:hover{
     flex-direction: column;
     width: 100%;
     gap: 1.5rem;
+    padding: 1rem 1rem;
 }
 
 p{
