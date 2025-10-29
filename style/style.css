@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+:root{
+    --header-bg-color: #DD072F;
+    --hover-button-bg-color: #CC061E;
+    --letter-color: #FECA1B;
+    --main-bg-color: #263238;
+    --card-bg-color: #F0F0F0;
+    --card-div-bg-color: #1E2834;
+}
+
+@font-face {
+    font-family: "pokemon";
+    src: url(../fuentes/Pokemon\ Solid.ttf);
+}
+
+header{
+    background-color: var(--header-bg-color);
+    color: var(--letter-color);
+    text-align: center;
+    width: 100dvw;
+}
+
+body{
+    font-family: "pokemon", sans-serif;
+    letter-spacing: 5px;
+    background-color: var(--main-bg-color);
+    color: var(--letter-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100dvh;
+    width: 100vw;
+}
+
+main{
+    min-height: 70dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem;
+}
+
+.main-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 5rem;
+}
+
+.form-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-input{
+    padding: 1rem;
+    width: 70vw;
+    border-radius: 1rem 0 0 1rem;
+    font-size: 1.5rem;
+}
+
+#form-input:focus{
+    outline: none;
+}
+
+#form-button{
+    padding: 1rem 1rem;
+    border-radius: 0 1rem 1rem 0;
+    background-color: var(--header-bg-color);
+    color: #FECA1B;
+    border: none;
+}
+
+#form-button:hover{
+    cursor: pointer;
+    background-color: var(--hover-button-bg-color);
+}
+
+footer > small{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+
+
+/* Estilos de Pokemon.html */
+
+a{
+    color: var(--letter-color);
+    text-decoration: none;
+}
+a:hover{
+    color: #fec91be1;
+}
+
+.pokemon-data{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: .5rem;
+}
+
+.pokemon-data div{
+    background-color: var(--card-div-bg-color);
+}
+
+.img-container{
+    overflow: hidden;
+}
+
+.img-container img{
+    height: 100%;
+    width: 100%;
+}
+
+.data-pokemon{
+    width: 100%;
+}
+
+p{
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+svg{
+    height: 1.5rem;
+    width: 1.5rem;
+    color: white;
+}
+
+.pokemon-footer{
+    height: 40dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Carga de Pokemon */
+
+#loading-pokeball{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    text-align: center;
+    animation: rotar 1.5s infinite;
+    background-color: transparent;
+}
+
+#loading-pokeball svg{
+    height: 20vh;
+    width: 20vw;
+    background-color: transparent;
+}
+
+@keyframes rotar{
+    0% {transform: rotate(360deg);}
+    100%{transform: rotate(0deg);}
+}
+
+@media (width > 800px) {
+    .data-container{
+        display: flex;
+        width: 80dvw;
+    }
+    .img-container{
+        height: 80vh;
+        width: 80vw
+    }
+    .data-pokemon{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    #form-input{
+        width: 40dvw;
+    }
+}
+
+/* IA */
+.tipo {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 2px;
+    transition: 0.2s;
+}
+
+.tipo:hover {
+    color: #333;
+}
+
+.tooltip {
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    z-index: 1000;
+    font-size: 14px;
+    pointer-events: none;
+}
