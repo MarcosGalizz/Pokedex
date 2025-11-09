@@ -1,10 +1,13 @@
-*{
+/* Reinicio de márgenes y padding. */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
 }
-:root{
+
+/* Definición de variables CSS */
+:root {
     --header-bg-color: #DD072F;
     --hover-button-bg-color: #CC061E;
     --letter-color: #FECA1B;
@@ -13,12 +16,14 @@
     --card-div-bg-color: #1E2834;
 }
 
+/* Se importa la fuente de Pokemon*/
 @font-face {
     font-family: "pokemon";
     src: url(../fuentes/Pokemon\ Solid.ttf);
 }
 
-header{
+/* Diseño del Header */
+header {
     background-color: var(--header-bg-color);
     color: var(--letter-color);
     text-align: center;
@@ -26,7 +31,8 @@ header{
     padding: 1rem;
 }
 
-body{
+/* Diseño del Body */
+body {
     font-family: "pokemon", sans-serif;
     letter-spacing: 5px;
     background-color: var(--main-bg-color);
@@ -38,7 +44,8 @@ body{
     width: 100vw;
 }
 
-main{
+/* Diseño del main */
+main {
     min-height: 70dvh;
     display: flex;
     flex-direction: column;
@@ -47,7 +54,8 @@ main{
     margin: 1rem;
 }
 
-.main-form{
+/* Formulario de búsqueda */
+.main-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,24 +63,24 @@ main{
     padding-bottom: 5rem;
 }
 
-.form-div{
+.form-div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#form-input{
+#form-input {
     padding: 1rem;
     width: 70vw;
     border-radius: 1rem 0 0 1rem;
     font-size: 1.5rem;
 }
 
-#form-input:focus{
+#form-input:focus {
     outline: none;
 }
 
-#form-button{
+#form-button {
     padding: 1rem 1rem;
     border-radius: 0 1rem 1rem 0;
     background-color: var(--header-bg-color);
@@ -80,16 +88,17 @@ main{
     border: none;
 }
 
-#form-button:hover{
+#form-button:hover {
     cursor: pointer;
     background-color: var(--hover-button-bg-color);
 }
 
-footer{
+/* Diseño del Footer */
+footer {
     padding: 1rem;
 }
 
-footer > small{
+footer > small {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,18 +108,18 @@ footer > small{
 }
 
 
-
-/* Estilos de Pokemon.html */
-
-a{
+/* Diseños de la página pokemon.html */
+a {
     color: var(--letter-color);
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     color: #fec91be1;
 }
 
-.pokemon-data{
+/* Contenedor principal de datos del Pokémon */
+.pokemon-data {
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -122,20 +131,22 @@ a:hover{
     box-shadow: 0 0 20px 0 #000000;
 }
 
-.pokemon-data div{
+.pokemon-data div {
     background-color: var(--card-div-bg-color);
 }
 
-.img-container{
+/* Imagen del Pokémon (control del tamaño y recorte) */
+.img-container {
     overflow: hidden;
 }
 
-.img-container img{
+.img-container img {
     height: 100%;
     width: 100%;
 }
 
-.data-pokemon{
+/* Información del pokemon */
+.data-pokemon {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -143,27 +154,28 @@ a:hover{
     padding: 1rem 1rem;
 }
 
-p{
+p {
     margin-left: 10px;
     overflow: hidden;
 }
 
-svg{
+
+svg {
     height: 1.5rem;
     width: 1.5rem;
     color: white;
 }
 
-.pokemon-footer{
+/* Pie de página exclusivo de la vista Pokémon */
+.pokemon-footer {
     height: 40dvh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Carga de Pokemon */
-
-#loading-pokeball{
+/* Diseño del elemento de carga */
+#loading-pokeball {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,37 +187,47 @@ svg{
     background-color: transparent;
 }
 
-#loading-pokeball svg{
-    height: 20vh;
+#loading-pokeball svg {
+    height: 30vh;
     width: 20vw;
     background-color: transparent;
 }
 
-@keyframes rotar{
-    0% {transform: rotate(360deg);}
-    100%{transform: rotate(0deg);}
+/* Animación de rotación para la pokéball */
+
+@keyframes rotar {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
 }
 
+/* Diseño Responsive */
 @media (width > 800px) {
-    .data-container{
+    .data-container {
         display: flex;
         width: 80dvw;
     }
-    .img-container{
+
+    .img-container {
         height: 80vh;
-        width: 80vw
+        width: 80vw;
     }
-    .data-pokemon{
+
+    .data-pokemon {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
     }
-    #form-input{
+
+    #form-input {
         width: 40dvw;
     }
+
+    #loading-pokeball svg {
+    height: 20vh;
+}
 }
 
-/* IA */
+/* TOOLTIP (IA) */
 .tipo {
     cursor: pointer;
     font-weight: bold;
@@ -220,6 +242,7 @@ svg{
     color: #333;
 }
 
+/* Caja flotante que muestra fortalezas/debilidades */
 .tooltip {
     position: absolute;
     display: none;
